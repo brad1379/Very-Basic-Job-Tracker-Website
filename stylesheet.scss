@@ -1,0 +1,204 @@
+// sets
+
+$gl-ms : "screen and (max-width: 23.5em)"; // up to 360px
+$gl-xs : "screen and (max-width: 35.5em)"; // up to 568px
+$gl-sm : "screen and (max-width: 48em)"; // max 768px
+$gl-md : "screen and (max-width: 64em)"; // max 1024px
+$gl-lg : "screen and (max-width: 80em)"; // max 1280px
+
+// table style
+
+table {
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    * {
+        position: relative
+    }
+
+    td,
+    th {
+        padding-left: 8px
+
+    }
+
+    thead tr {
+        height: 80px;
+        background: #6096B4;
+        font-size: 22px;
+        th {
+            &:hover{
+                background: #5c8ca6;
+            }
+        }
+    }
+
+    tbody tr {
+        height: 60px;
+        border-bottom: 1px solid #E3F1D5;
+
+        &:nth-child(even){
+            background-color: #d1e3ee;
+        }
+
+        &:last-child {
+            border: 0;
+        }
+    }
+
+    td,
+    th {
+        text-align: left;
+
+        &.l {
+            text-align: right
+        }
+
+        &.c {
+            text-align: center
+        }
+
+        &.r {
+            text-align: center
+        }
+    }
+
+}
+
+
+@media #{$gl-md} {
+
+
+    table {
+        display: block;
+
+        >*,
+        tr,
+        td,
+        th {
+            display: block
+        }
+
+        thead {
+            display: none
+        }
+
+        tbody tr {
+            height: auto;
+            padding: 8px 0;
+
+            td {
+                padding-left: 45%;
+                margin-bottom: 12px;
+
+                &:last-child {
+                    margin-bottom: 0
+                }
+
+                &:before {
+                    position: absolute;
+                    font-weight: 700;
+                    width: 40%;
+                    left: 10px;
+                    top: 0
+                }
+                &:nth-child(1):before {
+                    content: "#";
+                }
+
+                &:nth-child(2):before {
+                    content: "Date";
+                }
+
+                &:nth-child(3):before {
+                    content: "Position";
+                }
+
+                &:nth-child(4):before {
+                    content: "Company";
+                }
+
+                &:nth-child(5):before {
+                    content: "Location";
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+// body style
+
+body {
+    background: #b6b6b6;
+    font: 400 20px 'Calibri', 'Arial';
+    padding: 20px;
+}
+.table-sortable .th-sort-asc::after {
+    content: "\25b4"
+}
+.table-sortable .th-sort-desc::after {
+    content: "\25be"
+}
+
+.add-job {
+    // left: 32%;
+    // right: 32%;
+    // display: flex;
+    position: relative;
+    margin: auto;
+    margin-bottom: 10px;
+    background-color: #BDCDD6;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 780px;
+    width: 100%;
+    
+}
+
+#container {
+    display: flex;
+    margin: auto;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 2px;
+    -moz-column-gap: 2px;
+    column-gap: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.title-input .company-input .location-input{
+    display: flex;
+    margin: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin: 0px;
+    font-size: 18px;
+}
+
+h2 {
+    margin: 0;
+    padding: 5px;
+}
+
+.submit-btn {
+    align-self: right;
+    margin-left: 200px;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="add-job">
+        <h2>Add Job</h2>
+        <div id="container">
+            <div class="title-input">
+                <h3>Title</h3>
+                <input id="posEl" type="text" size="30">
+            </div>
+            <div class="company-input">
+                <h3>Company</h3>
+                <input id="compEl" type="text" size="30">
+            </div>
+            <div class="location-input">
+                <h3>Location</h3>
+                <input id="locEl" type="text" size="30">
+            </div>
+        </div>
+        <button id="submit-btn" onclick="addJobToTable()">Submit</button>
+    </div>
+    
+    <table id="myTable" class="table table-sortable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Date</th>
+                <th>Position</th>
+                <th>Company</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>1/20/23</td>
+                <td>Senior Application Developer</td>
+                <td>Boogle</td>
+                <td>Seattle, WA</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>1/21/23</td>
+                <td>Senior Data Scientist</td>
+                <td>Fells Wargo</td>
+                <td>St. Louis, MO</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>1/22/23</td>
+                <td>Data Scientist</td>
+                <td>DT Eurotrade</td>
+                <td>Remote</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>1/23/23</td>
+                <td>Senior Software Developer</td>
+                <td>Closed AI</td>
+                <td>San Francisco, CA</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
