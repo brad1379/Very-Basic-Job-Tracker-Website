@@ -6,6 +6,7 @@
  * @param {boolean} asc Determines if the sorting will be in ascending order 
  */
 
+// Function that actually does the sorting of the table
 function sortTableByColumn(table,column, asc = true) {
     const dirModifier = asc ? 1 : -1;
     const tBody = table.tBodies[0];
@@ -18,7 +19,6 @@ function sortTableByColumn(table,column, asc = true) {
         
         return aColText > bColText ? (1 * dirModifier) : (-1 * dirModifier);
     });
-    // console.log(sortedRows);
 
     // Remove all existing rows from the table
     while (tBody.firstChild) {
@@ -34,6 +34,7 @@ function sortTableByColumn(table,column, asc = true) {
     table.querySelector(`th:nth-child(${column + 1})`).classList.toggle("th-sort-desc", !asc);
 }
 
+// Assigned to the submit button to add jobs to the table
 function addJobToTable(){
     const posField = document.getElementById("posEl");
     const compField = document.getElementById("compEl");
@@ -90,6 +91,7 @@ function addJobToTable(){
     locField.value = "";
 }
 
+// Click on table header columns to sort ascending or descending
 document.querySelectorAll(".table-sortable th").forEach(headerCell => {
     headerCell.addEventListener("click", () =>{
         const tableElement = headerCell.parentElement.parentElement.parentElement;
